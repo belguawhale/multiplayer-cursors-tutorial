@@ -6,11 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "uuid": "^9.0.1",
     "ws": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/uuid": "^9.0.7",
+    "@types/ws": "^8.5.10",
+    "tsx": "^4.7.0"
   }
 }

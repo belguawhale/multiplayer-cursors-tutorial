@@ -2,7 +2,7 @@ import { Cursor } from "./Cursor"
 import useWebSocket from "react-use-websocket"
 import React, { useEffect, useRef } from "react"
 import throttle from "lodash.throttle"
-import { User } from "./User";
+import { User } from "../../../shared/User";
 
 interface Props {
     username: string;
