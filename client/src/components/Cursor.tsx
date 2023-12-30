@@ -1,8 +1,6 @@
 // Source: https://github.com/steveruizok/perfect-cursors
 
 import React from "react"
-import { usePerfectCursor } from "../hooks/useCursor"
-
 
 interface Props {
     point: number[];
@@ -23,9 +21,7 @@ export const Cursor: React.FC<Props> = ({ point, interpolate }) => {
         )
     }, [])
 
-    const onPointMove = interpolate ? usePerfectCursor(animateCursor, point) : animateCursor;
-
-    React.useLayoutEffect(() => onPointMove(point), [onPointMove, point])
+    React.useLayoutEffect(() => animateCursor(point), [animateCursor, point])
 
     return (
         <svg
@@ -36,7 +32,7 @@ export const Cursor: React.FC<Props> = ({ point, interpolate }) => {
                 left: -15,
                 width: 35,
                 height: 35,
-                // transitionDuration: interpolate ? "0.1s" : "0s"
+                transitionDuration: interpolate ? "0.1s" : "0s"
             }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 35 35"
